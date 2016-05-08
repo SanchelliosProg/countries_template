@@ -28,7 +28,7 @@ public class DbDataManager {
         db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + DbContracts.CountryTable.TABLE_NAME + ";", null);
         cursor.moveToFirst();
-        while (cursor.isAfterLast()){
+        while (!cursor.isAfterLast()){
             String countryName, continent, wikiUrl, smallImgUrl, bigImgUrl;
             long population;
             double gdp;
@@ -87,6 +87,10 @@ public class DbDataManager {
         country.addInternetResources(DEFAULT_WIKI_URL, DEFAULT_SMALL_IMAGE_URL, DEFAULT_BIG_IMAGE_URL);
         countries.add(country);
 
+        country = new Country("China", 4000000000L, 3000, ContinentConst.ASIA);
+        country.addInternetResources(DEFAULT_WIKI_URL, DEFAULT_SMALL_IMAGE_URL, DEFAULT_BIG_IMAGE_URL);
+        countries.add(country);
+
         parseArrayListOfCountriesToDb(countries);
     }
 
@@ -114,7 +118,7 @@ public class DbDataManager {
     }
 
     private boolean isCountryExistInDb(String countryName, SQLiteDatabase db){
-        Cursor cursor = db.rawQuery("SELECT " + countryName + " FROM " + DbContracts.CountryTable.TABLE_NAME +
+        Cursor cursor = db.rawQuery("SELECT " + DbContracts.CountryTable.COUNTRY_NAME + " FROM " + DbContracts.CountryTable.TABLE_NAME +
                 " WHERE " + DbContracts.CountryTable.COUNTRY_NAME + "='" + countryName + "';", null);
         if(cursor.getCount() > 0){
             cursor.close();

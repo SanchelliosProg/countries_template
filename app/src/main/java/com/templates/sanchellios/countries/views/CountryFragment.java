@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.view;
+package com.templates.sanchellios.countries.views;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,8 +20,6 @@ public class CountryFragment extends Fragment {
     public static CountryFragment newInstance(){
         return new CountryFragment();
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

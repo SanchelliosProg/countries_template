@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.view;
+package com.templates.sanchellios.countries.views;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
