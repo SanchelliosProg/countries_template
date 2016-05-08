@@ -25,4 +25,16 @@ public class CountryInternetResources {
         smallFlagImageURL = smallFlag;
         bigFlagImageURL = bigFlag;
     }
+
+    public String getWikiUrl() {
+        return wikiUrl;
+    }
+
+    public String getSmallFlagImageURL() {
+        return smallFlagImageURL;
+    }
+
+    public String getBigFlagImageURL() {
+        return bigFlagImageURL;
+    }
 }

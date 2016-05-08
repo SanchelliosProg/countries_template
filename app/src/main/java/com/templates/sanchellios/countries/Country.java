@@ -20,7 +20,45 @@ public class Country {
         this.continent = continent;
     }
 
+    public void addInternetResources(String wikiURL, String smallImgURL, String bigImgURL){
+        CountryInternetResources internetResources = new CountryInternetResources();
+        internetResources.setAllUrls(wikiURL, smallImgURL, bigImgURL);
+        this.internetResources = internetResources;
+    }
+
     public CountryInternetResources getInternetResources(){
         return internetResources;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    public double getGdp() {
+        return gdp;
+    }
+
+    public void setGdp(double gdp) {
+        this.gdp = gdp;
+    }
+
+    public String getContinent() {
+        return continent;
+    }
+
+    public void setContinent(String continent) {
+        this.continent = continent;
     }
 }
