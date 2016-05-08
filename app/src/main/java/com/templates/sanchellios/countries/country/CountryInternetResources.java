@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries;
+package com.templates.sanchellios.countries.country;
 
 /**
  * Created by aleksandrvasilenko on 07.05.16.

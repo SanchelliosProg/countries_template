@@ -1,11 +1,15 @@
-package com.templates.sanchellios.countries;
+package com.templates.sanchellios.countries.db;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import static com.templates.sanchellios.countries.DbContracts.*;
+
+import com.templates.sanchellios.countries.country.ContinentConst;
+import com.templates.sanchellios.countries.country.Country;
+
+import static com.templates.sanchellios.countries.db.DbContracts.*;
 
 /**
  * Created by aleksandrvasilenko on 07.05.16.

@@ -1,10 +1,13 @@
-package com.templates.sanchellios.countries;
+package com.templates.sanchellios.countries.view;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.templates.sanchellios.countries.R;
+import com.templates.sanchellios.countries.country.Country;
 
 import java.util.ArrayList;
 
@@ -49,6 +52,4 @@ public class CountryViewAdapter extends RecyclerView.Adapter<CountryViewAdapter.
             cardView = view;
         }
     }
-
-
 }

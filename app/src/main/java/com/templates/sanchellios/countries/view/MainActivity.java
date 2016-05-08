@@ -1,7 +1,9 @@
-package com.templates.sanchellios.countries;
+package com.templates.sanchellios.countries.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.templates.sanchellios.countries.R;
 
 public class MainActivity extends AppCompatActivity {
 
