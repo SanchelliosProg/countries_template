@@ -52,8 +52,7 @@ public class CountryViewAdapter extends RecyclerView.Adapter<CountryViewAdapter.
         Picasso.with(context)
                 .load(country.getInternetResources().getSmallFlagImageURL())
                 .fit()
-                .placeholder(R.drawable.anarchy_symbol)
-                .error(R.drawable.anarchy_symbol)
+                .placeholder(R.drawable.un_coat_of_arms)
                 .into(imageView);
 
         countryTextView.setText(country.getCountryName());

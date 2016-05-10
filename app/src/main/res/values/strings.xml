@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Countries</string>
+    <string name="continent">continent</string>
+    <string name="population">population</string>
+    <string name="gdp">gdp</string>
+    <string name="test">test</string>
 </resources>

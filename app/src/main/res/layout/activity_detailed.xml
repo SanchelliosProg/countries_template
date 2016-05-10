@@ -14,28 +14,57 @@
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:scaleType="fitXY"
-        android:src="@drawable/anarchy_flag"
-        android:layout_marginBottom="6dp"/>
+        android:src="@drawable/un_flag"/>
 
-    <TextView
-        android:id="@+id/da_continent_text_view"
-        android:layout_margin="8dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TEST"/>
-
-    <TextView
-        android:id="@+id/da_population_text_view"
-        android:layout_margin="8dp"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="@dimen/detailed_labels"
+            android:layout_height="wrap_content"
+            android:text="@string/continent"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/da_continent_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TEST"/>
-
-    <TextView
-        android:id="@+id/da_gdp_text_view"
-        android:layout_margin="8dp"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="@dimen/detailed_labels"
+            android:layout_height="wrap_content"
+            android:text="@string/population"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/da_population_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TEST"/>
-
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="@dimen/detailed_labels"
+            android:layout_height="wrap_content"
+            android:text="@string/gdp"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/da_gdp_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"/>
+    </LinearLayout>
 </LinearLayout>
