@@ -44,4 +44,9 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public void flushTheDb(){
+        SQLiteDatabase db = instance.getWritableDatabase();
+        db.execSQL("TRUNCATE TABLE "+ CountryTable.TABLE_NAME + ";");
+    }
 }
