@@ -13,6 +13,8 @@ import com.templates.sanchellios.countries.R;
 import com.templates.sanchellios.countries.country.Country;
 import com.templates.sanchellios.countries.db.DbDataManager;
 
+import java.util.ArrayList;
+
 /**
  * Created by aleksandrvasilenko on 07.05.16.
  */
@@ -27,9 +29,24 @@ public class CountryFragment extends Fragment {
                              Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView)inflater.inflate(R.layout.country_recycler,
                 container, false);
-        DbDataManager dbDataManager = new DbDataManager(getContext().getApplicationContext());
-        CountryViewAdapter adapter = new CountryViewAdapter(dbDataManager.loadAllCountriesFormDb(),
+        setUpRecyclerView(recyclerView);
+        return recyclerView;
+    }
+
+    private void setUpRecyclerView(RecyclerView recyclerView){
+        recyclerView.setAdapter(getAdapter());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+    }
+
+    private CountryViewAdapter getAdapter(){
+        CountryViewAdapter adapter = new CountryViewAdapter(getCountries(),
                 getContext().getApplicationContext());
+        setListenerToAdapter(adapter);
+        return adapter;
+    }
+
+    private void setListenerToAdapter(CountryViewAdapter adapter){
         adapter.setListener(new CountryViewAdapter.Listener() {
             @Override
             public void onClick(Country country) {
@@ -38,10 +55,10 @@ public class CountryFragment extends Fragment {
                 getActivity().startActivity(intent);
             }
         });
-        recyclerView.setAdapter(adapter);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+    }
 
-        return recyclerView;
+    private ArrayList<Country> getCountries(){
+        DbDataManager dbDataManager = new DbDataManager(getContext().getApplicationContext());
+        return dbDataManager.loadAllCountriesFormDb();
     }
 }
