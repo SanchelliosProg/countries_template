@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.views;
+package com.templates.sanchellios.countries.views.data_formatters;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
