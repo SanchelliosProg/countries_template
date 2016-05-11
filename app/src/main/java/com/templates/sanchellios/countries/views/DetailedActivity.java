@@ -14,29 +14,50 @@ import com.templates.sanchellios.countries.views.data_formatters.NumberFormatter
 
 public class DetailedActivity extends AppCompatActivity {
     public static String COUNTRY = "COUNTRY";
+    private ImageView flagImage;
+    private TextView continentLabel;
+    private TextView populationLabel;
+    private TextView gdpLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
 
-        Intent intent = getIntent();
-        Country country = intent.getParcelableExtra(COUNTRY);
+        Country country = getCountryFromIntent();
 
+        populateActionBar(country);
+        initScreenElements();
+        loadImage(country);
+        populateTextViews(country);
+    }
+
+    private Country getCountryFromIntent(){
+        Intent intent = getIntent();
+        return intent.getParcelableExtra(COUNTRY);
+    }
+
+    private void populateActionBar(Country country){
         setTitle(country.getCountryName());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
-        ImageView imageView = (ImageView)findViewById(R.id.da_flag_image);
-        TextView continentLabel = (TextView)findViewById(R.id.da_continent_text_view);
-        TextView populationLabel = (TextView)findViewById(R.id.da_population_text_view);
-        TextView gdpLabel = (TextView)findViewById(R.id.da_gdp_text_view);
+    private void initScreenElements(){
+        flagImage = (ImageView)findViewById(R.id.da_flag_image);
+        continentLabel = (TextView)findViewById(R.id.da_continent_text_view);
+        populationLabel = (TextView)findViewById(R.id.da_population_text_view);
+        gdpLabel = (TextView)findViewById(R.id.da_gdp_text_view);
+    }
 
+    private void loadImage(Country country){
         Picasso.with(getApplicationContext())
                 .load(country.getInternetResources().getBigFlagImageURL())
                 .fit()
                 .placeholder(R.drawable.un_flag)
-                .into(imageView);
+                .into(flagImage);
+    }
 
+    private void populateTextViews(Country country){
         continentLabel.setText(country.getContinent());
         populationLabel.setText(NumberFormatter.separateByComma(country.getPopulation()));
         gdpLabel.setText(GdpDimension.defineDimension(country.getGdp()));
