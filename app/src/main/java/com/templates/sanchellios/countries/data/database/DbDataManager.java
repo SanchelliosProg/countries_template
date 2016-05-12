@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.db;
+package com.templates.sanchellios.countries.data.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,7 +9,7 @@ import com.templates.sanchellios.countries.country.Country;
 
 import java.util.ArrayList;
 
-import static com.templates.sanchellios.countries.db.DbContracts.CountryTable;
+import static com.templates.sanchellios.countries.data.database.DbContracts.CountryTable;
 
 /**
  * Created by aleksandrvasilenko on 08.05.16.

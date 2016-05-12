@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.templates.sanchellios.countries.R;
-import com.templates.sanchellios.countries.db.DbDataManager;
+import com.templates.sanchellios.countries.data.database.DbDataManager;
 
 public class MainActivity extends AppCompatActivity {
 

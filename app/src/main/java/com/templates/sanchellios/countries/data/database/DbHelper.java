@@ -1,10 +1,10 @@
-package com.templates.sanchellios.countries.db;
+package com.templates.sanchellios.countries.data.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static com.templates.sanchellios.countries.db.DbContracts.CountryTable;
+import static com.templates.sanchellios.countries.data.database.DbContracts.CountryTable;
 
 /**
  * Created by aleksandrvasilenko on 07.05.16.

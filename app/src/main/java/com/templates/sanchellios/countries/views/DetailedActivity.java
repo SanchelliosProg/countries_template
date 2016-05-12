@@ -9,8 +9,8 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.templates.sanchellios.countries.R;
 import com.templates.sanchellios.countries.country.Country;
-import com.templates.sanchellios.countries.views.data_formatters.GdpDimension;
-import com.templates.sanchellios.countries.views.data_formatters.NumberFormatter;
+import com.templates.sanchellios.countries.data.manip.GdpDimension;
+import com.templates.sanchellios.countries.data.manip.NumberFormatter;
 
 public class DetailedActivity extends AppCompatActivity {
     public static String COUNTRY = "COUNTRY";

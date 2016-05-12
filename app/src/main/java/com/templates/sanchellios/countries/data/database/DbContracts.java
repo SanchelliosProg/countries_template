@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.db;
+package com.templates.sanchellios.countries.data.database;
 
 import android.provider.BaseColumns;
 

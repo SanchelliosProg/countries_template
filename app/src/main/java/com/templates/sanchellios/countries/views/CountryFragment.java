@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.templates.sanchellios.countries.R;
 import com.templates.sanchellios.countries.country.Country;
-import com.templates.sanchellios.countries.db.DbDataManager;
+import com.templates.sanchellios.countries.data.database.DbDataManager;
 
 import java.util.ArrayList;
 

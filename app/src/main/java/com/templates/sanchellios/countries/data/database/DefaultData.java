@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.db;
+package com.templates.sanchellios.countries.data.database;
 
 import com.templates.sanchellios.countries.country.ContinentConst;
 import com.templates.sanchellios.countries.country.Country;
@@ -97,6 +97,31 @@ public class DefaultData {
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Coat_of_arms_of_New_Zealand.svg/2000px-Coat_of_arms_of_New_Zealand.svg.png",
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/2000px-Flag_of_New_Zealand.svg.png");
         countries.add(country);
+
+        country = new Country("Spain", 46423064, 1.636, ContinentConst.EUROPE);
+        country.addInternetResources("https://en.wikipedia.org/wiki/Spain",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Coat_of_Arms_of_Spain_(corrections_of_heraldist_requests).svg/2000px-Coat_of_Arms_of_Spain_(corrections_of_heraldist_requests).svg.png",
+                "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png");
+        countries.add(country);
+
+        country = new Country("Nigeria", 182202000, 1.166, ContinentConst.AFRICA);
+        country.addInternetResources("https://en.wikipedia.org/wiki/Nigeria",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Coat_of_arms_of_Nigeria.svg/2000px-Coat_of_arms_of_Nigeria.svg.png",
+                "http://www.crwflags.com/fotw/images/n/ng.gif");
+        countries.add(country);
+
+        country = new Country("India", 1276267000, 8.027, ContinentConst.ASIA);
+        country.addInternetResources("https://en.wikipedia.org/wiki/India",
+                "http://previews.123rf.com/images/perysty/perysty1201/perysty120100042/11751350-Coat-of-arms-of-India-Stock-Vector-india-emblem.jpg",
+                "http://www.mapsofindia.com/maps/india/india-flag-a4.jpg");
+        countries.add(country);
+
+        country = new Country("England", 54316600, 2.68, ContinentConst.EUROPE);
+        country.addInternetResources("https://en.wikipedia.org/wiki/England",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Royal_Coat_of_Arms_of_the_United_Kingdom.svg/2000px-Royal_Coat_of_Arms_of_the_United_Kingdom.svg.png",
+                "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1280px-Flag_of_England.svg.png");
+        countries.add(country);
+
         return countries;
     }
 }

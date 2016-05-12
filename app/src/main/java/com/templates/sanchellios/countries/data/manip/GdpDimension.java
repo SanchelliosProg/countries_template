@@ -1,4 +1,4 @@
-package com.templates.sanchellios.countries.views.data_formatters;
+package com.templates.sanchellios.countries.data.manip;
 
 /**
  * Created by aleksandrvasilenko on 10.05.16.
