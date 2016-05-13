@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startCountryListFrag(){
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.country_container, CountryFragment.newInstance())
+                .replace(R.id.country_container, CountryFragment.newInstance())
                 .commit();
     }
 }
